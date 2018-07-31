@@ -1,0 +1,38 @@
+<h4>Lista de Autores</h4>
+
+<div class="card">
+  <div class="card-content">
+
+  <table class="centered responsive-table highlight">  <!-- Table -->
+    <thead>
+        <tr>
+          <th class="titleTR">Autor</th>
+          <th>Años</th>
+          <th>Imagen</th>
+          <th>País</th>
+          <th>Likes</th>
+          <th colspan="2" class="pinky actionsTR">Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let author of authorList">
+          <!-- Make Single Author Component -->
+          <td class="pinky titleBody" [routerLink]="['/author', author.name]">{{author.name}}</td>
+          <td>{{author.birth}}</td>
+		      <td>{{author.image}}</td>
+          <td>{{author.country}}</td>
+          <td>{{author.likes}}</td>
+          <td>
+            <a class="create" href="admin/authors#top"
+              (click)="onEdit(author)"><mat-icon>create</mat-icon></a>  <!-- Add -->
+              
+            <a class="delete" (click)="onDelete(author.$key)">
+              <mat-icon>delete</mat-icon></a> <!-- Remove -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

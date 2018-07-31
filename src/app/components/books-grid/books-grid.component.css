@@ -1,0 +1,32 @@
+/* Pagination CSS - /deep/ to target into Ngx Component (Angular's view encapsulation) */
+
+.ngPages /deep/ .ngx-pagination .current {
+    background: #FF4081;
+    border-radius: 3px;
+    color:black;
+  }
+
+  .ngPages /deep/ .ngx-pagination  {
+    text-align: center;
+    position: relative;
+    margin: 35px auto;
+    }
+
+
+/* Correction for col m */
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+
+  h2 {
+  margin-left: 20px;
+  }
+}
+
+.grid {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.margin-left {
+  margin-left: 25px;
+}

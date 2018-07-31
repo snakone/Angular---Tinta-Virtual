@@ -1,0 +1,57 @@
+
+     <div class="card">
+       <form #addCommentForm="ngForm" (ngSubmit)="addComment(addCommentForm)">  <!-- Form -->
+
+           <div class="card-content">
+             <span class="card-title pinky">Comentar</span>
+                <br>
+
+                <div class="input-field">   <!-- Name Input -->
+                  <i class="material-icons prefix">account_circle</i>
+                  <input
+                      type="text"
+                      #name="ngModel" name="name"
+                      [(ngModel)]="bookComment.name"
+                      placeholder="Escribe tu nombre"
+                      data-length="25" maxlength="25" required>
+                  <label class="active" for="name">Nombre</label>
+                </div>
+
+                 <div class="input-field">   <!-- Comment Input -->
+                   <i class="material-icons prefix">comment</i>
+                   <textarea
+                       class="materialize-textarea"
+                       id="comment"
+                       name="comment"
+                       #comment="ngModel"
+                       placeholder="Escribe un comentario"
+                       [(ngModel)]="bookComment.comment"
+                       data-length="200" maxlength="200"
+                        required></textarea>
+                   <label class="active" for="comment">Comentario</label>
+                 </div>
+
+                 <div class="input-field">   <!-- Quantity Input -->
+                   <input
+                       type="hidden"
+                       name="book"
+                       #book="ngModel"
+                       [(ngModel)]="selectedBook.title">
+                 </div>
+
+                 <div class="input-field">   <!-- Likes HIDDEN Input -->
+                   <input
+                       type="hidden"
+                       #likes="ngModel" name="likes"
+                       [(ngModel)]="bookComment.likes">
+                 </div>
+
+           </div>
+
+           <div class="card-action pink lighten-2">
+               <span>Enviar comentario</span>  <!-- Send Comment -->
+                <button type="submit" mat-button><mat-icon >playlist_add</mat-icon></button>
+           </div>
+
+        </form>
+     </div>

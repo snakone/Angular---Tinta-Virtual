@@ -1,0 +1,36 @@
+
+.capital{
+  text-transform: uppercase;
+}
+
+.pinky {
+  color:#FF4081;
+  font-weight: bold;
+}
+
+.right {
+  position: relative;
+  right: 0px;
+  bottom:10px;
+}
+
+.circle {
+  border-radius: 50%;
+  float:right;
+}
+
+img {
+  width: 75px;
+  height: 75px;
+}
+
+p:last-child{
+  position: relative;
+  right:15px;
+  bottom:20px;
+}
+
+mat-icon:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}

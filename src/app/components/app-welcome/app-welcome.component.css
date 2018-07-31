@@ -1,0 +1,44 @@
+body {
+  font-size: 1.2em;
+}
+
+.pinky {
+  color:#FF4081;
+  font-weight: bold;
+}
+
+.angular {
+  color:red;
+  font-weight: bold;
+}
+
+.IT {
+  color:green;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.tecnologies {
+  margin-top: 60px;
+}
+
+.tecnologies img{
+  width: 90px;
+  height: 90px;
+  margin: 15px;
+}
+
+.tecnologies img:hover{
+filter:brightness(150%);
+cursor:pointer;
+}
+
+.signature {
+  margin-top: 60px;
+  margin-bottom: 5px;
+
+  text-align: right;
+}

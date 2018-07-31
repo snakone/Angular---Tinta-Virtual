@@ -1,0 +1,19 @@
+
+<mat-toolbar color="accent" class="header">
+  <mat-toolbar-row>
+
+  <top-menu></top-menu>
+
+    <span class="nav-Title">{{ appTitle }}</span>
+    <span class="example-spacer"></span>
+
+    <a href="{{ githubLink }}" target="_NEW" ><mat-icon matTooltip="Github!" svgIcon="github"></mat-icon></a>
+    <mat-icon matBadge="{{matBadge}}"
+                          [matBadgeHidden]="!matBadge"
+                          [routerLink]="['basket']"
+                          class="example-icon">shopping_cart</mat-icon>
+    <a href="{{ appMail }}"><mat-icon class="email-icon">email</mat-icon></a>
+
+
+  </mat-toolbar-row>
+</mat-toolbar>

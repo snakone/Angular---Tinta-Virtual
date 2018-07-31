@@ -1,0 +1,38 @@
+<div *ngIf="totalPrice">
+    <table class="responsive-table centered striped"> 
+    <thead>
+      <th class="center titleTR">Título</th>
+      <th class="center image">Imagen</th>
+      <th class="center">Precio</th>
+      <th class="center">Cantidad</th>
+      <th class="center">Subtotal</th>
+      <th class="pinky actionsTR">Acciones</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of booksOnBasket"> <!-- Array of Books on Basket Objects -->
+        <td class="pinky center titleBody">{{book.title}}</td>
+        <td><img src="{{urlPath}}{{book.image}}.jpg"></td>
+        <td>{{book.price}} €</td>
+        <td>{{book.quantity}}</td>
+        <td>{{book.subTotal}} €</td>
+        <td><mat-icon (click)="onDelete(book)" class="pinky">delete</mat-icon></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="right-align">
+          <span class="bold">TOTAL:</span>
+          <p class="pinky">{{totalPrice}} €<p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button type="button" class="btn pink right" (click)="purchaseBasket()">Comprar</button>
+</div>
+
+<div *ngIf="!totalPrice">  <!-- Only if We DONT have a TotalPrice -->
+  <h5>Parece ser que aún no has añadido ningún libro a la cesta. <br><br>
+    ¿A que esperas?</h5>
+<p>
+  <button type="button" class="btn pink right" (click)="goBack('books/list')">Volver</button>
+</p>
+</div>

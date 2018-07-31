@@ -1,0 +1,41 @@
+<button class="nav-Menu" mat-icon-button [matMenuTriggerFor]="menu">  <!-- Menu Trigger -->
+  <mat-icon>more_vert</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu"  [overlapTrigger]="false">
+  <button [routerLink]="['home']" routerLinkActive="active" mat-menu-item>
+    <mat-icon>home</mat-icon> <!-- Home -->
+    <span>Inicio</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>fiber_new</mat-icon> <!-- Newest Books -->
+    <span>Novedades</span>
+  </button>
+  <button mat-menu-item [matMenuTriggerFor]="bookType">
+    <mat-icon>book</mat-icon> <!-- Menu Trigger Books -->
+    <span>Catálogo</span>
+  </button>
+  <button routerLinkActive="active" mat-menu-item [matMenuTriggerFor]="Admin">
+    <mat-icon>person</mat-icon> <!-- Menu Trigger Admin -->
+    <span>Admin</span>
+  </button>
+</mat-menu>
+
+<mat-menu #bookType="matMenu"> <!-- Books Menu -->
+  <button [routerLink]="['books/list']" routerLinkActive="active"
+          mat-menu-item><mat-icon>collections_bookmark</mat-icon>Tapa</button>
+
+  <button [routerLink]="['books/table']" routerLinkActive="active"
+          mat-menu-item><mat-icon>view_list</mat-icon>Tabla</button>
+</mat-menu>
+
+<mat-menu #Admin="matMenu"> <!-- Admin Menu -->
+  <button [routerLink]="['admin/books']" routerLinkActive="active"
+          mat-menu-item><mat-icon>bookmarks</mat-icon>Libros</button>
+
+  <button [routerLink]="['admin/authors']" routerLinkActive="active"
+          mat-menu-item><mat-icon>perm_identity</mat-icon>Autores</button>
+
+  <button [routerLink]="['admin/comments']" routerLinkActive="active"
+          mat-menu-item><mat-icon>comment</mat-icon>Comentarios</button>
+</mat-menu>

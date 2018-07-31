@@ -1,0 +1,31 @@
+<h4>Muchas Gracias por tu compra!</h4>
+
+<h5>Esto es lo que has comprado:</h5>
+
+<br>
+
+<table class="centered responsive-table striped">
+  <thead>
+    <th class="titleTR center">Título</th>
+    <th class="center image">Imagen</th>
+    <th class="center">Precio</th>
+    <th class="center">Cantidad</th>
+    <th class="center">Sub-Total</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let basket of bookBasket">
+      <td class="pinky titleBody">{{basket.title}}</td>
+      <td><img src="{{urlPath}}{{basket.image}}.jpg"></td>
+      <td>{{basket.price}} €</td>
+      <td>{{basket.quantity}}</td>
+      <td>{{basket.subTotal}} €</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div class="right">
+  <h4>Precio Total</h4>
+  <span class="right" *ngIf="selectedBasket"><h5>{{selectedBasket.totalPrice}} €</h5></span>
+</div>

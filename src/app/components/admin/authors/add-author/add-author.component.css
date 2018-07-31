@@ -1,0 +1,24 @@
+.btn {
+  margin: 5px;
+}
+
+.card {
+  margin: 30px auto;
+  padding: 10px 25px;
+}
+
+/* Icon */
+
+.input-field .prefix {
+  left: -25px;
+}
+
+/* Form icons on Active */
+
+.input-field .prefix.active {
+     color: #ff4081;
+   }
+
+h4 {
+  margin-bottom: 40px;
+}

@@ -1,0 +1,28 @@
+ <div class="card">
+   <form #purchasebookForm="ngForm" (ngSubmit)="addBooktoBasket(purchasebookForm)">
+
+       <div class="card-content">
+         <span class="card-title pinky">Comprar</span>
+            <br>
+            <p class="truncate">{{selectedBook.title}}</p>
+            <br><br>
+             <div class="input-field">   <!-- Quantity Input -->
+               <i class="material-icons prefix">monetization_on</i>
+               <input
+                   type="number"
+                   name="quantity"
+                   #quantity="ngModel"
+                   placeholder="Cantidad"
+                   [(ngModel)]="bookBasket.quantity"
+                   min="1" required>
+               <label class="active" for="quantity">Cantidad</label>
+             </div>
+       </div>
+<br><br>
+       <div class="card-action pink lighten-2"> <!-- Add to Basket -->
+           <span>Añadir al carrito</span>
+            <button type="submit" mat-button><mat-icon >add_shopping_cart</mat-icon></button>
+       </div>
+
+    </form>
+ </div>

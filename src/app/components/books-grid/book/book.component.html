@@ -1,0 +1,33 @@
+<div class="col l2 m4 s6"
+  [ngClass]="{'red': book.price>='30'}"> <!--  Apply "red" Class to book 'Price > 30' -->
+  <div class="card sticky-action hoverable box">
+      <div class="card-image waves-effect waves-block waves-light">
+        <div class="tooltip-container"> <!-- ToolTip -->
+            <span class="tooltip">
+              <p><span class="pinky">AUTOR/A</span></p> {{book.author}}
+              <p><span class="pinky">PRECIO</span></p> {{book.price}} €
+            </span>
+              <!-- Different Badges -->
+
+              <div *ngIf="book.new" class="NEW"><span>NEW</span></div>
+              <div *ngIf="book.language=='Inglés'" class="INGLES"><span>INGLÉS</span></div>
+              <div *ngIf="book.language=='Catalán'" class="CATALAN"><span>CATALÁN</span></div>
+              <div *ngIf="book.likes>='10'" class="HOT"><span>HOT</span></div>
+
+              <img alt="{{book.title}}" src="{{urlPath}}{{book.image}}.jpg">
+        </div>
+        <div class="card-action"> <!-- Actions -->
+
+          <label>
+            <mat-icon (click)="showBook(book.$key)"
+            class="shopCart">info_outline</mat-icon> <!-- Show Book Info -->
+          </label>
+
+          <label>
+            <mat-icon (click)="addLike(book)"
+             class="shopCart">favorite_border</mat-icon></label> <!-- Add Like to a Book -->
+          <p>Likes: {{book.likes}}</p>
+        </div>
+      </div>
+  </div>
+</div>

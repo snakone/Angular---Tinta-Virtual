@@ -1,0 +1,97 @@
+.btn mat-icon {
+  vertical-align: middle;
+}
+
+button {
+  max-width: 50px;
+}
+
+.create mat-icon {
+  color: green;
+}
+
+.delete mat-icon {
+  color:red;
+}
+
+.create:hover , .delete:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.btn mat-icon {
+  vertical-align: middle;
+}
+
+button {
+  max-width: 50px;
+}
+
+a {
+  margin:0px 5px;
+}
+
+h4 {
+  margin-bottom: 40px;
+}
+
+.pinky {
+  font-weight: bold;
+  color: #ff4081;
+}
+
+.pinky:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px #000;
+}
+
+.titleTR {
+
+ height: 71px;
+
+}
+.priceTR {
+min-width: 95px;
+}
+.actionsTR {
+min-width: 105px;
+}
+
+.ng-star-inserted{
+  padding: 0 20px;
+}
+
+
+.pinky {
+  color:#f50057;
+}
+
+@media only screen and (max-width : 993px) {
+
+  .responsive-table thead {
+  min-width: 25%;
+  text-align: center;
+  margin-left: -20px;
+  }
+
+th .pinky .actionsTR{
+  padding-right: 10px;
+}
+
+  .responsive-table tbody {
+  max-width: 70%;
+  text-align: center;
+  margin-left: -10px;
+  padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width : 604px) {
+
+  .titleBody{
+    display: inline-block;
+    word-wrap:break-word;
+    width: 100%;
+    white-space: normal;
+    height: 71px;
+  }
+}

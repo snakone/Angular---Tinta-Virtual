@@ -1,0 +1,48 @@
+.body {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+.bookTape{
+  width: 100%;
+  margin: 0 auto;
+  padding:0;
+  border-radius: 5px;
+}
+
+.flow{
+  font-size: 1.2em;
+  margin: 30px auto 40px auto;
+}
+
+
+.bookTape img {
+  width: 175px;
+  padding: 10px;
+
+}
+
+.paddingTop {
+  padding-top: 25px;
+  left: 0;
+}
+
+.bookAuthor{
+  color:orange;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.pinky {
+  color:#FF4081;
+}
+
+.paddingLeft{
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+
+p {
+margin:1em 0px;
+}
