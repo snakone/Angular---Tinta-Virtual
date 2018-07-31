@@ -1,0 +1,40 @@
+<h4 id="list">Lista de Libros</h4>
+
+<div class="card">
+  <div class="card-content">
+
+  <table class="centered responsive-table highlight">
+    <thead>
+        <tr>
+          <th class="titleTR">Libro</th>
+          <th>Autor/a</th>
+          <th>Género</th>
+          <th>Imagen</th>
+          <th>Stock</th>
+          <th>Likes</th>
+          <th class="priceTR">Precio</th>
+          <th colspan="2" class="pinky actionsTR">Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let book of bookList">
+          <td class="pinky titleBody" [routerLink]="['/book', book.$key]">{{book.title}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.gender}}</td>
+          <td>{{book.image}}</td>
+          <td>{{book.stock}}</td>
+          <td>{{book.likes}}</td>
+          <td>{{book.price}} €</td>
+          <td>
+            <a class="create" href="admin/books#form"
+            (click)="onEdit(book)"><mat-icon>create</mat-icon></a>
+
+            <a class="delete" (click)="onDelete(book.$key)"><mat-icon>delete</mat-icon></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

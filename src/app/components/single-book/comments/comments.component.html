@@ -1,0 +1,21 @@
+ <div class="card">
+
+   <div class="card-content">
+     <span class="card-title pinky">Comentarios</span>
+
+      <div class="center">
+        <pagination-controls previousLabel="Anterior"
+                             nextLabel="Siguiente"
+                             class="ngPages"
+                             (pageChange)="p = $event">
+        </pagination-controls>
+      </div>
+
+     <comment [comment]="comment" [selectedBook]="selectedBook"
+     *ngFor="let comment of commentList | paginate: { itemsPerPage: 2, currentPage: p }">
+     </comment>
+
+   </div>
+
+
+ </div>

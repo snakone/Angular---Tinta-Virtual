@@ -1,0 +1,129 @@
+<h4 id="form">Agregar un nuevo Libro</h4>
+
+<div class="card">
+ <div class="card-content">
+   <form #addBookForm="ngForm" (ngSubmit)="onSubmit(addBookForm)">  <!-- Form -->
+
+     <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="bookService.selectedBook.$key">
+
+        <div class="input-field">   <!-- Book Title Input -->
+          <i class="material-icons prefix">book</i>
+          <input
+              type="text"
+              #title="ngModel" name="title"
+              [(ngModel)]="bookService.selectedBook.title"
+              placeholder="Título del libro" required>
+          <label class="active" for="title">Libro</label>
+        </div>
+
+        <div class="input-field">   <!-- Author Input -->
+          <i class="material-icons prefix">account_circle</i>
+          <input
+              type="text"
+              #author="ngModel" name="author"
+              [(ngModel)]="bookService.selectedBook.author"
+              placeholder="Nombre del autor/a" required>
+          <label class="active" for="name">Autor/a</label>
+        </div>
+
+        <div class="input-field">   <!-- Gender Input -->
+          <i class="material-icons prefix">collections</i>
+          <input
+              type="text"
+              #gender="ngModel" name="gender"
+              [(ngModel)]="bookService.selectedBook.gender"
+              placeholder="Género del libro" required>
+          <label class="active" for="name">Género</label>
+        </div>
+
+        <div class="input-field">   <!-- language Input -->
+          <i class="material-icons prefix">language</i>
+          <input
+              type="text"
+              #language="ngModel" name="language"
+              [(ngModel)]="bookService.selectedBook.language"
+              placeholder="Idioma del libro" required>
+          <label class="active" for="language">Idioma</label>
+        </div>
+
+        <div class="input-field">   <!-- Type Input -->
+          <i class="material-icons prefix">library_books</i>
+          <input
+              type="text"
+              #type="ngModel" name="type"
+              [(ngModel)]="bookService.selectedBook.type"
+              placeholder="Tipo de libro" required>
+          <label class="active" for="type">Tipo</label>
+        </div>
+
+        <div class="input-field">   <!-- Image Input -->
+          <i class="material-icons prefix">image</i>
+          <input
+              type="text"
+              #image="ngModel" name="image"
+              [(ngModel)]="bookService.selectedBook.image"
+              placeholder="Nombre de la imagen" required>
+          <label class="active" for="image">Imagen</label>
+        </div>
+
+        <div class="input-field">   <!-- Price Input -->
+          <i class="material-icons prefix">monetization_on</i>
+          <input
+              type="number"
+              #price="ngModel" name="price"
+              [(ngModel)]="bookService.selectedBook.price"
+              placeholder="Precio del libro" required>
+          <label class="active" for="price">Precio</label>
+        </div>
+
+        <div class="input-field">   <!-- Description Input -->
+          <i class="material-icons prefix">description</i>
+          <textarea
+              class="materialize-textarea"
+              type="textarea" id="description"
+              #description="ngModel" name="description"
+              [(ngModel)]="bookService.selectedBook.description"
+              placeholder="Descripción del libro"
+              data-length="400" maxlength="400"></textarea>
+          <label class="active" for="description">Descripción</label>
+        </div>
+
+        <div class="input-field">   <!-- Stock Input -->
+          <i class="material-icons prefix">monetization_on</i>
+          <input
+              type="number"
+              #stock="ngModel" name="stock"
+              [(ngModel)]="bookService.selectedBook.stock"
+              placeholder="Stock del libro" required>
+          <label class="active" for="stock">Stock</label>
+        </div>
+
+        <div class="input-field">    <!-- Likes HIDDEN Input -->
+          <input
+              type="hidden"
+              #likes="ngModel" name="likes"
+              [(ngModel)]="bookService.selectedBook.likes">
+        </div>
+
+        <div class="input-field">   <!-- isNEW? HIDDEN Input -->
+          <input
+              type="hidden"
+              #new="ngModel" name="new"
+              [(ngModel)]="bookService.selectedBook.new">
+        </div>
+
+        <div class="input-field center">
+          <a href="admin/books#list">
+            <button class="btn pink" type="submit"> <!-- Add Button -->
+            Añadir
+           </button>
+         </a>
+          <button class="btn blue" type="reset"
+                  (click)="resetForm(addBookForm)"> <!-- Reset Button -->
+            Reset
+          </button>
+        </div>
+
+   </form>
+ </div>
+</div>

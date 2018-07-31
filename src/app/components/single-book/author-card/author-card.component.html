@@ -1,0 +1,25 @@
+<div *ngIf="author">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title class="pinky capital">
+          {{author.name}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+       <ng-template matExpansionPanelContent> <!-- Lazy Rendering  -->
+         <img class="circle" src="{{urlPath}}{{author.image}}.jpg"> <!-- Author Expansion Panel -->
+        <p>{{author.country}}</p>
+        <p>{{author.birth}}</p>
+        <p>Likes: <span class="pinky">{{author.likes}}</span></p>
+        <p>{{author.bio}}</p>
+        <br>
+        <p><mat-icon (click)="addLike(author)"
+            class="right pinky">favorite</mat-icon></p> <!-- Add Like to Author -->
+      </ng-template>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+
+ </div>

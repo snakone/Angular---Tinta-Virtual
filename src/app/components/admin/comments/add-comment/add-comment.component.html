@@ -1,0 +1,61 @@
+<br>
+<h4 id="top">Agregar un nuevo Comentario</h4>
+
+<div class="card">
+ <div class="card-content">
+   <form #addCommentForm="ngForm" (ngSubmit)="onSubmit(addCommentForm)"> <!-- Form -->
+
+     <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="commentService.selectedComment.$key">
+
+        <div class="input-field">   <!-- User Name Input -->
+          <i class="material-icons prefix">account_circle</i>
+          <input
+              type="text"
+              #name="ngModel" name="name"
+              [(ngModel)]="commentService.selectedComment.name"
+              placeholder="Nombre del usuario" required>
+          <label class="active" for="name">Nombre</label>
+        </div>
+
+        <div class="input-field">   <!-- Book Input -->
+          <i class="material-icons prefix">book</i>
+          <input
+              type="text"
+              #book="ngModel" name="book"
+              [(ngModel)]="commentService.selectedComment.book"
+              placeholder="Nombre del libro" required>
+          <label class="active" for="book">Título</label>
+        </div>
+
+        <div class="input-field">   <!-- Comment Input -->
+          <i class="material-icons prefix">description</i>
+          <textarea
+              class="materialize-textarea"
+              type="textarea" id="comment"
+              #comment="ngModel" name="comment"
+              [(ngModel)]="commentService.selectedComment.comment"
+              placeholder="Escribe un comentario"
+              data-length="500" maxlength="500"></textarea>
+          <label class="active" for="comment">Comentario</label>
+        </div>
+
+        <div class="input-field">   <!-- Likes HIDDEN Input -->
+          <input
+              type="hidden"
+              #likes="ngModel" name="likes"
+              [(ngModel)]="commentService.selectedComment.likes">
+        </div>
+
+        <div class="input-field center">
+          <button class="btn pink" type="submit"> <!-- Add Button -->
+           Añadir
+          </button>
+          <button class="btn blue" type="reset"
+          (click)="resetForm(addCommentForm)"> <!-- Reset Button -->
+           Reset
+          </button>
+        </div>
+
+   </form>
+ </div>
+</div>

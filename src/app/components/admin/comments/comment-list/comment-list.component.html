@@ -1,0 +1,37 @@
+<h4>Lista de Comentarios</h4>
+
+<div class="card">
+  <div class="card-content">
+
+  <table class="centered responsive-table highlight">  <!-- Table -->
+    <thead>
+        <tr>
+          <th class="titleTR">Usuario</th>
+          <th>Libro</th>
+          <th>Comentario</th>
+          <th>Likes</th>
+
+          <th colspan="2" class="pinky actionsTR">Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let comment of commentList">
+          <!-- Make Single Comment Component -->
+          <td class="pinky titleBody">{{comment.name}}</td>
+          <td>{{comment.book}}</td>
+		      <td>{{comment.comment}}</td>
+          <td>{{comment.likes}}</td>
+          <td>
+            <a class="create" href="admin/comments#top"
+              (click)="onEdit(comment)"><mat-icon>create</mat-icon></a>  <!-- Add -->
+
+            <a class="delete" (click)="onDelete(comment.$key)">
+              <mat-icon>delete</mat-icon></a> <!-- Remove -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

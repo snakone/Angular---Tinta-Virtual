@@ -1,0 +1,81 @@
+<br>
+<h4 id="top">Agregar un nuevo Autor/a</h4>
+
+<div class="card">
+ <div class="card-content">
+   <form #addAuthorForm="ngForm" (ngSubmit)="onSubmit(addAuthorForm)"> <!-- Form -->
+
+     <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="authorService.selectedAuthor.$key">
+
+        <div class="input-field">   <!-- Author Name Input -->
+          <i class="material-icons prefix">account_circle</i>
+          <input
+              type="text"
+              #name="ngModel" name="name"
+              [(ngModel)]="authorService.selectedAuthor.name"
+              placeholder="Nombre del autor/a" required>
+          <label class="active" for="name">Autor/a</label>
+        </div>
+
+        <div class="input-field">   <!-- Image Input -->
+          <i class="material-icons prefix">image</i>
+          <input
+              type="text"
+              #image="ngModel" name="image"
+              [(ngModel)]="authorService.selectedAuthor.image"
+              placeholder="Nombre de la imagen" required>
+          <label class="active" for="name">Imagen</label>
+        </div>
+
+		    <div class="input-field">   <!-- Birth Input -->
+          <i class="material-icons prefix">event</i>
+          <input
+              type="text"
+              #birth="ngModel" name="birth"
+              [(ngModel)]="authorService.selectedAuthor.birth"
+              placeholder="Fecha" required>
+          <label class="active" for="birth">Fecha</label>
+        </div>
+
+		   <div class="input-field">   <!-- Country Input -->
+          <i class="material-icons prefix">language</i>
+          <input
+              type="text"
+              #country="ngModel" name="country"
+              [(ngModel)]="authorService.selectedAuthor.country"
+              placeholder="País" required>
+          <label class="active" for="country">País</label>
+        </div>
+
+        <div class="input-field">   <!-- Bio Input -->
+          <i class="material-icons prefix">description</i>
+          <textarea
+              class="materialize-textarea"
+              type="textarea" id="bio"
+              #bio="ngModel" name="bio"
+              [(ngModel)]="authorService.selectedAuthor.bio"
+              placeholder="Biografía del autor"
+              data-length="500" maxlength="500"></textarea>
+          <label class="active" for="bio">Biografía</label>
+        </div>
+
+        <div class="input-field">   <!-- Likes HIDDEN Input -->
+          <input
+              type="hidden"
+              #likes="ngModel" name="likes"
+              [(ngModel)]="authorService.selectedAuthor.likes">
+        </div>
+
+        <div class="input-field center">
+          <button class="btn pink" type="submit"> <!-- Add Button -->
+           Añadir
+          </button>
+          <button class="btn blue" type="reset"
+          (click)="resetForm(addAuthorForm)"> <!-- Reset Button -->
+           Reset
+          </button>
+        </div>
+
+   </form>
+ </div>
+</div>

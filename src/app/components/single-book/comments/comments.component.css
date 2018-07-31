@@ -1,0 +1,23 @@
+/* Pagination CSS - /deep/ to target into Ngx Component (Angular's view encapsulation) */
+
+.ngPages /deep/ .ngx-pagination .current {
+    background: #FF4081;
+    border-radius: 3px;
+    color:black;
+  }
+
+  .ngPages /deep/ .ngx-pagination  {
+    text-align: center;
+    position: relative;
+    margin: 35px auto;
+    }
+
+.card {
+  margin-top: 17px;
+  width: 100%;
+}
+
+.pinky {
+  color:#FF4081;
+  font-weight: bold;
+}

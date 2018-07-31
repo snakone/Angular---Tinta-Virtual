@@ -1,0 +1,45 @@
+<div class="row">
+  <div scrolling class="col s12 m2 l1 fixed" id="fixed">
+
+    <ul class="mainList">
+      <li><a href="#">{{ navTitles[0] }}</a></li> <!-- Libros -->
+      <li>
+        <ul class="nestedList">
+           <li *ngFor="let Gender of Genders"><a [routerLink]="['books/list']"
+               (click)="filterByGender(Gender)">{{Gender}}</a></li>
+        </ul>
+       </li>
+     </ul>
+
+     <ul class="mainList">
+       <li><a href="#">{{ navTitles[1] }}</a></li> <!-- Novelas -->
+       <li>
+         <ul class="nestedList long">
+            <li *ngFor="let Novel of Novels"><a [routerLink]="['books/list']"
+                (click)="filterByGender(Novel)">{{Novel}}</a></li>
+         </ul>
+        </li>
+      </ul>
+
+     <ul class="mainList">
+       <li><a href="#">{{ navTitles[2] }}</a></li> <!-- Formatos -->
+       <li>
+         <ul class="nestedList">
+            <li *ngFor="let Format of Formats"><a [routerLink]="['books/list']"
+                (click)="filterByType(Format)">{{Format}}</a></li>
+         </ul>
+        </li>
+      </ul>
+
+      <ul class="mainList">
+        <li><a href="#">{{ navTitles[3] }}</a></li> <!-- Idiomas -->
+        <li>
+          <ul class="nestedList">
+             <li *ngFor="let Language of Languages"><a [routerLink]="['books/list']"
+                 (click)="filterByLanguage(Language)">{{Language}}</a></li>
+          </ul>
+         </li>
+       </ul>
+
+  </div>
+</div>

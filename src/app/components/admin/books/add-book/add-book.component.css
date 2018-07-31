@@ -1,0 +1,33 @@
+.btn {
+  margin: 5px;
+}
+
+.card {
+  margin: 30px 0% 30px 8%;
+  padding: 10px 25px;
+}
+
+#form {
+  margin-left: 8%;
+}
+
+.input-field .prefix {
+  left: -25px;
+}
+
+/* Form icons on Active */
+
+.input-field .prefix.active {
+     color: #ff4081;
+   }
+
+h4 {
+  margin: 40px auto;
+}
+
+@media only screen and (max-width : 603px) {
+
+  .card {
+    margin: 30px auto;
+  }
+}

@@ -1,0 +1,29 @@
+<h2>Catálogo</h2>
+
+<div class="grid">
+
+<!-- Pagination Controls TOP --> <!-- Show only if no Empty List and Books Nª + 12 -->
+<pagination-controls *ngIf="!emptyList && pagination"
+                     previousLabel="Anterior"
+                     nextLabel="Siguiente"
+                     class="ngPages"
+                     (pageChange)="p = $event">
+</pagination-controls>
+
+<!-- BOOKS -->
+<div class="row ngPagination">
+      <book *ngFor="let book of bookList | paginate: { itemsPerPage: 12, currentPage: p }"
+            [book]="book"> <!-- INPUT -->
+      </book>
+
+      <div *ngIf="emptyList" class="margin-left">Lo sentimos pero en estos momentos
+      no disponemos de ningún ejemplar de esta categoría. Disculpe las molestias.</div>
+</div>
+
+<!-- Pagination Controls BOTTOM --> <!-- Show only if no Empty List -->
+<pagination-controls *ngIf="!emptyList" previousLabel="Anterior"
+                     nextLabel="Siguiente"
+                     class="ngPages"
+                     (pageChange)="p = $event">
+</pagination-controls>
+</div>

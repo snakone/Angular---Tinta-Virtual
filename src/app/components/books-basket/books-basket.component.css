@@ -1,0 +1,95 @@
+img {
+  width: 60px;
+  height: 100px;
+}
+
+.striped {
+  overflow:auto;
+}
+
+.pinky {
+  font-weight: bold;
+  color: #ff4081;
+}
+
+.pinky:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px #000;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.right {
+  margin-top: 10%;
+  position: relative;
+  right:25px;
+}
+
+.btn:hover{
+  opacity: 0.7;
+}
+
+
+.titleTR {
+
+ height: 71px;
+
+}
+.priceTR {
+min-width: 95px;
+}
+.actionsTR {
+min-width: 105px;
+}
+
+.ng-star-inserted{
+  padding: 0 20px;
+}
+
+
+@media only screen and (max-width : 993px) {
+
+  .responsive-table thead {
+  min-width: 25%;
+  text-align: center;
+  margin-left: -10px;
+  padding-right: 20px;
+  }
+
+th .pinky .actionsTR{
+  padding-right: 10px;
+}
+
+.image {
+  height: 117px;
+}
+
+  .responsive-table tbody {
+  max-width: 70%;
+  text-align: center;
+  margin-left: -10px;
+  padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width : 604px) {
+
+  .titleBody{
+    display: inline-block;
+    word-wrap:break-word;
+    width: 100%;
+    white-space: normal;
+    height: 71px;
+  }
+
+  .image {
+    height: 135px;
+  }
+  .right-align{
+    position: absolute;
+    bottom:0;
+  }
+}

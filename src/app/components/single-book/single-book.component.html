@@ -1,0 +1,46 @@
+
+<div class="body" *ngIf="selectedBook">
+ <!-- Only if we have a selectedBook -->
+	<h4> {{ selectedBook.title}} </h4>
+	<h6 class="bookAuthor"> {{ selectedBook.author }} </h6>
+
+		<div class="row paddingTop">
+			 <div class="col s12 m6 l5 center bookTape"> <!-- Book Image -->
+			 		<img src="{{urlPath}}{{selectedBook.image}}.jpg">
+			 </div>
+			 <div class="col s12 m6 l4 offset-l3 center paddingLeft"> <!-- Book Details -->
+					<book-info [selectedBook]="selectedBook"></book-info> <!-- Book-Info Component -->
+			 </div>
+		</div>
+
+		 <div class="row">
+				<div class="col s12 m12 l12"> <!-- Book Description -->
+					<blockquote class="flow">{{ selectedBook.description }}</blockquote>
+				</div>
+		</div>
+
+		<div class="row">
+				<div class="col s12 m12 l6">
+					<add-comment [selectedBook]="selectedBook"></add-comment> <!-- Add Comment Component -->
+				</div>
+				<div class="col s12 m12 l6">
+					<purchase [selectedBook]="selectedBook"></purchase> <!-- Purchase Component -->
+				</div>
+		</div>
+		<div class="row">
+				<div class="col s12 m12 l12">
+					<author-card [selectedBook]="selectedBook"></author-card> <!-- Author Card Component -->
+				</div>
+	  </div>
+
+		<div class="row">
+				<div class="col s12 m12 l12">
+					<comments [selectedBook]="selectedBook"></comments> <!-- Author Card Component -->
+				</div>
+	  </div>
+
+</div>
+
+<!-- <button type="button" class="btn blue" (click)="goBack('books/list')">Tapa</button>
+
+<button type="button" class="btn green" (click)="goBack('books/table')">Tabla</button> -->

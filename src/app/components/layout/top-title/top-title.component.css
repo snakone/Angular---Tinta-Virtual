@@ -1,0 +1,42 @@
+@media screen and (max-width: 600px) {
+
+.subTitle {
+    display: block;
+    font-size: 1.2em;
+    transform-origin: 80% 80%;
+    top:15px;
+    transition: all 2s;
+    padding: 15px;
+  }
+
+  h2 {
+    display: none;
+    transform-origin: 50% 50%;
+  }
+
+  .siteTitle {
+  max-height: 57px;
+  }
+
+}
+
+@media screen and (max-width: 281px) {
+
+  .siteTitle {
+  max-height: 85px;
+  }
+}
+
+
+.siteTitle {
+  background-color: #ff669a;
+  color:white;
+  height: 120px;
+}
+
+h2 {
+  margin-top: 17px;
+  margin-bottom:0px;
+  transform-origin: 100% 100%;
+  transition: all 2s;
+}
